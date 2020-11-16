@@ -2,4 +2,4 @@
 	import Product from './Product.svelte'
 </script>
 
-<Product productTitle="A Book" />
+<Product productTitle="A Book" on:click="{() => alert('Click')}" />

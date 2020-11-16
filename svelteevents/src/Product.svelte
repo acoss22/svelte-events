@@ -2,8 +2,8 @@
 export let productTitle;
 
 </script>
-<article>
+<article on:click="{() => console.log('hello')}">
     <h1>{productTitle}</h1>
-    <button>Add to Cart</button>
+    <button on:click>Add to Cart</button> 
     <button>Delete</button>
 </article>
