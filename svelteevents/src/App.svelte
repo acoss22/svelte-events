@@ -1,10 +1,27 @@
 <script>
 	import Product from "./Product.svelte";
-</script>
 
-<Product productTitle="A Book" 
-	on:add-to-cart={() => alert('Add to cart!')} 
-	on:delete={()=>{
-		alert('delete');
-	}}
+	let products = [
+		{
+		id: 'p1',
+		title: "A book",
+		price: 9.99
+	
+		}
+	];
+
+	function addToCart(event){
+		console.log(event);
+	}
+
+	function deleteProduct(event){
+		console.log(event);
+	}
+</script>
+{#each products as product}
+<Product 
+	{...product}
+	on:add-to-cart={addToCart} 
+	on:delete={deleteProduct}
 />
+{/each}
