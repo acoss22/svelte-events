@@ -43,9 +43,6 @@
 		  event.target.selectionEnd = selectionEnd;
 		});
   
-		// Will not work!
-	  //   event.target.selectionStart = selectionStart;
-	  //   event.target.selectionEnd = selectionEnd;
 	}
   
 	afterUpdate(() => {
